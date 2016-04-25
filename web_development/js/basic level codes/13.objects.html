@@ -1,0 +1,40 @@
+<html>
+<body>
+<script>
+//declaring an object without method/member function
+//Syntax >>>  var objectName={propName1:"value1", propName2:567 ,propName3:"value2"};
+var car1={type:1, modelNo:234, name:"merc S class"};
+//or
+var car2={	type:4, 
+			modelNo:567, 
+			name:"merc C class",
+		};
+
+//declaring an object with method/member function
+var car3 ={	type:2,
+			modelNo:392,
+			name:"merc E class",
+			funcName1:function()
+			{
+			return "<br>Hello from car 3<br>";
+			}
+			};
+var car4 ={	type:3,
+			modelNo:127,
+			name:"merc A class",
+			funcName2:function()
+			{
+			return "<br>This is "+this.name+" which is the smallest of all the mercs. Its type is "+this.type;
+			}
+			};
+
+//Accessing object variable/data member/property
+document.write(car1.name+"<br><br>");
+
+//Accessing method/member functions
+document.write(car3.funcName1());
+document.write(car4.funcName2());
+
+</script>
+</body>
+</html>

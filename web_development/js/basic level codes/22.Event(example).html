@@ -1,0 +1,39 @@
+<style>
+.hide {display:none}
+img {width:200px}
+</style>
+<body>
+<a href="#" id="id_mit" id2="id2_mit">MIT</a>
+<br><a href="#" id="id_stanford" id2="id2_stanford">STANFORD</a>
+<br><a href="#" id="id_harvard" id2="id2_harvard">HARVARD</a>
+
+<br><br><br>
+<img src="images/mit.jpg" id="id2_mit" class="hide">
+<img src="images/stanford.jpg" id="id2_stanford" class="hide">
+<img src="images/harvard.jpg" id="id2_harvard" class="hide">
+</body>
+<script>
+var mit=document.getElementById('id_mit');
+var stanford=document.getElementById('id_stanford');
+var harvard=document.getElementById('id_harvard');
+
+mit.addEventListener("click", display);
+stanford.addEventListener("click", display);
+harvard.addEventListener("click", display);
+
+function display()
+{
+var images=document.querySelectorAll("img");
+for(var i=0;i<3;i++)
+{
+images[i].className="hide";
+}
+var first=this.attributes["id2"].value;
+var second=document.getElementById(first);
+
+second.className="";
+
+
+}
+
+</script>

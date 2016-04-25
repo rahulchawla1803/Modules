@@ -1,0 +1,37 @@
+<html>
+<body>
+<h2>Add numbers</h2>
+<br>
+<!--
+No need for type="text" and </input> as it is default
+-->
+<input id="numOne"> + <input id="numTwo">
+<p id="result"></p>
+<script>
+var numOne=document.getElementById('numOne');
+//better to define them like this rather typing document.getEle... every time;
+//1. It saves time, 2. It is more efficient.
+var numTwo=document.getElementById('numTwo');
+var sum=document.getElementById('result');
+
+/*numOne.addEventListener("click", myFunction()
+{
+alert("hello");
+});*/
+// "click", "input", "mouseleave" a lot of these are there under the name of MOUSE EVENTS
+numOne.addEventListener("input", function1);
+numTwo.addEventListener("input", function1);
+
+function function1()
+{
+var one=parseInt(numOne.value);
+//Value from <input> is string, thus to convert into integer we use parseInt()
+var two=parseInt(numTwo.value);
+var newSum=one+two;
+sum.innerHTML="Result is: " + newSum;
+//or
+//sum.innerHTML="Result is: "+ (one+two);
+}
+</script>
+</body>
+</html>

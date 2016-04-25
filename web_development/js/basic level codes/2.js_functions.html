@@ -1,0 +1,39 @@
+<html>
+<body>
+
+<script>
+var name1="pomegrante";
+var name2="mulberry";
+function trial0()
+{
+return "return value from trial0 function <br>";
+//return works same as it works in C
+}
+function trial1(var1,var2)
+{
+document.write(var2+" is better than "+var1);
+document.write("<br><br>html tags are used inside the quotes for their functionalities <br><br>")
+}
+function trial2()
+{
+	alert("Alert: ERROR 101");
+}
+document.write(trial0()+"<br><br>");
+trial1("person1","person2");//function call
+trial1(name1,name2);
+</script>
+
+<form>
+<input type="button" value="Click1" onClick="trial2()">
+<button onClick="trial2()">Click2</button>
+<!--Both tags do the same thing.<input> should be written inside the <form>,
+whereas there is no such constraint for <button> -->
+
+<!--Trial function is called when you click on the button-->
+
+<!--Semicolon is not needed if only one statement is executed, for two, semicolon is necessary-->
+<Br>
+<button onClick="alert('First Statement'); alert('Second statement');">Click3</button>
+</form>
+</body>
+</html>

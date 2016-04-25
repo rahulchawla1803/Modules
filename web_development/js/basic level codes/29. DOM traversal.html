@@ -1,0 +1,107 @@
+<html>
+<style>
+.list{}
+.sublist{}
+.special {color:blue;}
+</style>
+<ul class="list">
+	<li>One</li>
+	<li class="special">Two</li>
+	<li>Three
+		<ul class="sublist">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</li>
+</ul>
+<script src="jQuery.js"></script>
+<script>
+//DOM- DOCUMNET OBJECT MODEL
+//OPEN CONSOLE
+//$('li'); 
+//$('li').first(); 
+//$('li').last();
+//$('ul');
+//$('li').first().hide(); or show()
+//$('li').eq(3);  
+//$('ul').eq(0).children() or $('ul:first').children()
+//$('li').eq(0).siblings() or $('li:first').siblings()
+//$('li').eq(5).parent(); 
+//$('li').eq(5).parent().parent(); 
+//$('li').eq(5).parent().parent().parent();
+//$('li').first().next();
+
+//CONSOLE COMMAND OVER
+
+/*
+$(function(){
+$('li').on("click",function(){
+$(this).next().hide();
+});
+});
+*/
+
+/*
+$(function(){
+$('li').on("click",function(){
+$(this).next().remove();
+});
+});
+*/
+
+/*
+$(function(){
+$('li').on("click",function(){
+$(this).siblings().remove();
+});
+});
+*/
+
+/*
+$(function(){
+$('li').on("click",function(){
+$(this).removeClass('special');
+$(this).siblings().addClass('special');
+});
+});
+*/
+
+/*
+$(function(){
+$('.sublist').on("click",function(){
+$(this).find('li').addClass('special');
+});
+});
+*/
+
+/*
+$(function(){
+$('.list').on("click",function(){
+$(this).find('.special').remove();
+});
+});
+*/
+
+/*
+$(function(){
+$('li').on("click",function(){
+$(this).hide();
+if($(this).is('.special'))
+{
+	alert("this is special");
+}
+});
+});
+*/
+/*
+$(function(){
+$('.sublist li').on("click",function(){
+$(this).hide();
+});
+});
+*/
+
+
+</script>
+</html>

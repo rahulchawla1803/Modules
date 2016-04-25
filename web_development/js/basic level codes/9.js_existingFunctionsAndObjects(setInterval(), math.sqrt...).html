@@ -1,0 +1,25 @@
+<html>
+<script>
+//Maths objects and functions
+var a= Math.PI;
+var b= Math.E;
+document.write("Value of PI= "+a+"<br>Value of e= "+b);
+var squareRoot=Math.sqrt(55);
+document.write("<br>Square root of 55 is "+ squareRoot);
+
+
+/*setInterval(arg1,arg2)
+arg1: What is the function doing.
+arg2: What is the time period of that in milliseconds.
+*/
+function printTime()
+{
+var object=new Date();
+var hour=object.getHours();
+var min=object.getMinutes();
+var sec=object.getSeconds();
+document.write(hour+":"+min+":"+sec+"<br>");
+}
+setInterval("printTime()", 1000);//1000 is basically 1000ms=1sec
+</script>
+</html>

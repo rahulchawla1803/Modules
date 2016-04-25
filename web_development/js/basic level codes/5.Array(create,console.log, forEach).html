@@ -1,0 +1,32 @@
+<html>
+<body>
+<script>
+/*Always script should be loaded later than the body as the fonts, titles get loaded at initial stage only
+ thus giving an image to the user that page is loaded faster*/
+
+ //Two ways to create Array:
+ //Method 1
+ var array1=["value1", "value2", "value3"];
+ document.write(array1); //console.log(array1) can be used at the time of debugging to print a particular value in the console. Egs array1
+ //Method 2
+ var array2= new Array("value01", "value02", "value03");
+ document.write("<br>"+array2);
+ //To add to arrays
+ var array3=["value11","valu12", ["value13", "value14"], "value15"];
+ document.write("<br>"+array3);
+ 
+ 
+ //Shift function- pops a value from the start.
+ document.write("<br><br>The value popped out is:"+array1.shift()+"<br>The array now is:"+array1);
+ 
+ 
+ //forEach- modern version of 'for' loop
+ array2.forEach(
+	function(value,index)
+	{
+	alert("value: "+value+", index: "+index);
+	}
+	);
+ </script>
+</body>
+</html>

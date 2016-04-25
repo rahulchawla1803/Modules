@@ -1,0 +1,49 @@
+<html>
+<style>
+	li input {display: none;}
+	li.edit span{ display:none;}
+	li.edit input{ display: initial;}
+<!-- When class is edit, span is not displayed and input,textbox value is displayed to edit-->
+</style>
+<body>
+	<h1>JavaScript Events</h1>
+	<ul>
+		<li>
+			<span>First</span>
+			<input value="First"></input>
+		</li>
+		<li>
+			<span>Second</span>
+			<input value="Second"></input>
+		</li>
+		<li>
+			<span>Third</span>
+			<input value="Third"></input>
+		</li>
+	</ul>
+</body>
+<script>
+var checklist=document.querySelector('ul');
+var items=checklist.querySelectorAll('li');
+var inputs=checklist.querySelectorAll('input');
+
+for(var i=0; i<items.length; i++)
+{
+	items[i].addEventListener("click",editItems);
+	inputs[i].addEventListener("blur", updateItems);
+}
+
+function editItems()
+{
+this.className="edit";
+}
+
+function updateItems()
+{
+this.previousElementSibling.innerHTML=this.value;
+//this refers to input, and this.previousElementSibling will point to <span>.
+this.parentNode.className="";
+}
+
+</script>
+</html>

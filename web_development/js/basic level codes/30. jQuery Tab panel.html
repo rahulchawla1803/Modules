@@ -1,0 +1,159 @@
+<html>
+<style>
+
+.tab ul {
+    margin: 0;
+    padding: 0;
+}
+.tab ul li {
+    list-style-type: none;
+    display: inline-block;
+    background: #999;
+    margin: 0;
+    padding: 3px 10px;
+    border-radius: 10px 10px 0 0;
+    color: black;
+    cursor: pointer;
+
+}
+.tab ul li:hover {
+    color: #fff;
+    background: #666;
+}
+
+.tab ul li.active {
+    color: black;
+    background: #666;
+}
+
+.tab .panel {
+    display:none;
+    background: #c9c9c9;
+    padding: 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+.tab .panel.active {
+    display:block;
+}
+
+</style>
+
+<div class="tab">
+            <ul class="tabs">
+                <li rel="panel1" class="active">panel1</li>
+                <!--rel OR id2 OR data-id anything can be used-->
+                <li rel="panel2">panel2</li>
+                <li rel="panel3">panel3</li>
+                <li rel="panel4">panel4</li>
+            </ul>
+
+            <div id="panel1" class="panel active">
+                content1<br/>
+                content1<br/>
+                content1<br/>
+                content1<br/>
+                content1<br/>
+            </div>
+            <div id="panel2" class="panel">
+                content2<br/>
+                content2<br/>
+                content2<br/>
+                content2<br/>
+                content2<br/>
+            </div>
+            <div id="panel3" class="panel">
+                content3<br/>
+                content3<br/>
+                content3<br/>
+                content3<br/>
+                content3<br/>
+            </div>
+            <div id="panel4" class="panel">
+                content4<br/>
+                content4<br/>
+                content4<br/>
+                content4<br/>
+                content4<br/>
+            </div>
+        </div>
+
+
+<div class="tab">
+        <ul class="tabs">
+                <li rel="panel5" class="active">panel5</li>
+                <li rel="panel6">panel6</li>
+                <li rel="panel7">panel7</li>
+                <li rel="panel8">panel8</li>
+            </ul>
+
+            <div id="panel5" class="panel active">
+                content5<br/>
+                content5<br/>
+                content5<br/>
+                content5<br/>
+                content5<br/>
+            </div>
+            <div id="panel6" class="panel">
+                content6<br/>
+                content6<br/>
+                content6<br/>
+                content6<br/>
+                content6<br/>
+            </div>
+            <div id="panel7" class="panel">
+                content7<br/>
+                content7<br/>
+                content7<br/>
+                content7<br/>
+                content7<br/>
+            </div>
+            <div id="panel8" class="panel">
+                content8<br/>
+                content8<br/>
+                content8<br/>
+                content8<br/>
+                content8<br/>
+            </div>
+        </div>
+
+
+<script src="jQuery.js"></script>
+<script>
+$(function() {
+
+    $('.tab .tabs li').on('click', function() {
+
+
+        //this points to the li clicked
+        var $panel = $(this).closest('.tab');
+        //panel will store the information whether the li selected is from panelA(1,2,3,4) or panelB(5,6,7,8)
+
+        $panel.find('.tabs li.active').removeClass('active');
+        //find the li which was earlier active in the panel A or B and remove the active class
+        $(this).addClass('active');
+        //Add the active class to the li which is selected
+
+        //figure out which panel to show
+        var panelToShow = $(this).attr('rel');
+        //panelToShow will hold the value from panel(1...8) depending on which li is clicked
+
+        //hide current panel
+        $panel.find('.panel.active').slideUp(300, showNextPanel);
+        //above line of code will hide the existing area(which contains content1<br>content1<br>...) which is active. 
+
+        //show next panel
+        function showNextPanel() {
+            $(this).removeClass('active');
+
+            $('#'+panelToShow).slideDown(300, function() {
+            //will show the existing area for which the corresponding panel was clicked
+                $(this).addClass('active');
+            });
+        }
+    });
+
+
+});
+
+</script>

@@ -1,0 +1,49 @@
+<style>
+.hide {display:none;}
+img {width:200px}
+</style>
+<body>
+    
+<a  href="#" id="google" id2="google-pic" >google</a>
+ <!-- Instead of id2 any keyword can be used, id2 of <a> is equal to id of <img> so as to RELATE both of them -->
+ <!-- href="#" is necessary for some purpose. See the difference between href="#" and href="" -->
+ <br> <a href="#" id="facebook"  id2="facebook-pic" >facebook</a>
+ <br> <a href="#" id="amazon"  id2="amazon-pic">amazon</a>
+ <br>
+
+    <img class="hide" id="google-pic" src="images/google.jpg">
+    <img class="hide" id="facebook-pic" src="images/facebook.jpg">
+    <img class="hide" id="amazon-pic" src="images/amazon.jpg" >
+
+</body>
+<script>
+var google = document.getElementById("google");
+var facebook = document.getElementById("facebook");
+var amazon = document.getElementById("amazon");
+
+google.addEventListener("click", picLink);
+facebook.addEventListener("click", picLink);
+amazon.addEventListener("click", picLink);
+
+function picLink() {
+
+ var allImages = document.querySelectorAll("img");
+ //var allImages=document.querySelectorAll('.hide') won't work after the first time as the className is changing between "hide" and ""
+  
+  for (var i = 0; i < allImages.length; i++) {
+   allImages[i].className = "hide";
+  }
+
+  var picId = this.attributes["id2"].value;
+  //Attributes of tag <a> are id, id2, href
+  //Suppose google was clicked, the this.attributes["id2"].value=google-pic, which is the id of <img>.
+  //attributes.id2=attributes["id2"]
+  //google.value can also be accessed by -->  document.getElementById('google').attributes.id2.value;
+  var pic = document.getElementById(picId);
+  //And not document.getElementById('picId'), because picId is a variable.
+ 
+ pic.className = "";
+ //to unhide the pic.
+}
+</script>
+

@@ -1,0 +1,39 @@
+<html>
+<script>
+var items=new Array("itouch", "nexus4", "hard disk drive", "bike");
+document.write("<br>The normal array is: "+items);
+
+//Measuring length
+document.write("<br><br><br>The length can be mesured by...." +items.length);
+
+
+/*Concatenation... Array1={1,2,3,4}, Array2={9,8,7,6}, Then concatenated Array3={1,2,3,4,9,8,7,6}*/
+var items2=new Array("laptop", "wallet");
+var concatenatedArray=items.concat(items2);
+document.write("<br><br><br><br><br>The concatenated array is: "+concatenatedArray);
+
+
+
+//Joining by symbol '--'
+var items01= items.join("--");
+document.write("<br><br><br><br><br>Array after joining: "+items01); 
+
+
+//Reverse
+var items02=items.reverse();
+document.write("<br><br><br><br><br>Reverse order: "+items02);
+
+
+//Sort alphabetically
+var items03=items.sort();
+document.write("<br><br><br><br><br>Sorted alphabetically: "+items03);
+
+
+//Push and pop
+document.write("<br><br><br><br><br>The array now is: "+items);
+items.pop();
+document.write("<br><br>The array after popping one element: "+items);
+items.push("specs","steadler");
+document.write("<br><br>The array after pushing two elements: "+ items);
+</script>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<style>
+</style>
+<body>
+<p>This is box one
+<input type="number" id="id1"/>
+</p>
+<p>This is box two
+<input type="number" id="id2"/>
+</p>
+<button onclick="myfunction()">Send</button>
+<script>
+var obj=document.getElementById("id1");
+var value1=obj.value;
+var value2=document.getElementById("id2").value;
+
+function myfunction()
+{
+obj.value=8888888888;
+//performance of method1 is better than method2
+document.getElementById("id2").value=9999999999;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<form name="rahulForm">
+
+Username <input type="text" name="name1"/>
+Password <input type="password" name="name2"/>
+<br>
+<input type="button" value="Enter" onclick="myfunc()" />
+
+</form>
+<script>
+
+function myfunc(){
+//whenever you create form, form objects(in the form of arrays) are created automatically in JS.
+//Accessing those form objects by forms[0] or the name of the form.
+var x1=document.forms[0].length;
+var x2=document.rahulForm.length;
+var y1=document.forms[0].elements[0].value;
+//we can also replace elements[0] with the name of the element
+var y2=document.forms[0].name1.name;
+//elements[1] is line no. 7 i.e input type password.
+document.write(x2);
+document.write("<br>"+y1);}
+</script>
+
+
+</body>
+</html>

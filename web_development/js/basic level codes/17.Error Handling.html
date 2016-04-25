@@ -1,0 +1,28 @@
+<html>
+<style>
+</style>
+<body>
+<p>Enter a number between 5 to 10</p>
+<input type="number" id="id1"/>
+<input type="button" value="Enter" onclick="myFunction()"/>
+<p id="id2"></p>
+<script>
+function myFunction()
+{
+var x=document.getElementById("id1").value;
+//to get the value in a variable use "value" and for getting content in any tag use "innerHTML"
+try
+{
+if(x<5) throw "Number less than 5";
+if(x>10) throw "Number greator than 10";
+if(x>=5&&x<=10) throw "Number valid";
+}
+catch(err)
+{
+document.getElementById("id2").innerHTML=err;
+}
+document.getElementById("id1").value=""; //to clear the number from text bar after pressing enter!!!
+}
+</script>
+</body>
+</html>

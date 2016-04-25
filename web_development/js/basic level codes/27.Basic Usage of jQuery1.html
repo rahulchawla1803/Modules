@@ -1,0 +1,27 @@
+<html>
+<form>
+	<input id="id_1"/>
+	<br>
+	<input id="id_2"/>
+	<br>
+	<input type="button" id="idButton" value="Submit"/>
+</form>
+<script src="jQuery.js"></script>
+<script>
+//Don't forget to close the script tag for jQuery
+$(function() {
+//it doesn't look like a step by step execution as all effects are happening simultaneously.
+$('#id_1').hide(1000).show(300);
+$('#id_2').delay(7000).slideUp(1000).slideDown(1000);
+$('#id_1').fadeToggle(1000).slideToggle(300);
+//$('#idButton').css({color:'red',fontWeight:'bold'});
+//$('#idButton').css({opacity:'0.7'});
+//try this!
+
+//fontWeight is in JS for css we write font-weight, thus it can be also written as $('#idButton').css({'font-weight':'bold'}); 
+});
+$(function() {
+//keep it in one function or divide it into two, it won't really make a difference.
+});
+</script>
+</html>

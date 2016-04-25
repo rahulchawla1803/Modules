@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1>Enter a value between 1 to 10</h1>
+<input id="numb" type="number">
+<input type="button" value="CLICK" onclick="function_check()">
+<p id="demo"></p>
+<script>
+function function_check()
+{
+var num,text;
+num=document.getElementById("numb").value;
+if(num>=1&&num<=10)
+{
+text="Number valid";
+}
+else
+{
+text="Number Invalid";
+}
+document.getElementById("demo").innerHTML=text;
+}
+</script>
+
+</body>
+</html>

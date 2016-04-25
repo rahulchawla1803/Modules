@@ -1,0 +1,22 @@
+<html>
+<body>
+<img id="MyImage" src="images/bulboff.jpg">
+<br>
+<br>
+<input type="button" value="CLICK to change the mode on/off the bulb" onclick="function_call()">
+<script type="text/javascript">
+function function_call()
+{
+var image=document.getElementById("MyImage");
+if(image.src.match("bulboff"))
+{
+image.src="images/bulbon.jpg";
+}
+else
+{
+image.src="images/bulboff.jpg";
+}
+}
+</script> 
+</body>
+</html>
