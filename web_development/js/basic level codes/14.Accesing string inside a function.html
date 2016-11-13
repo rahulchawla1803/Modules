@@ -9,6 +9,7 @@ function myfunction()
 {
 var str=document.getElementById("id1").innerHTML;
 //To get the content from id1 we also added ".innerHTML".
+//".value" is used to get the content entered in the <input>, example a text box value can be fetched by document.getElementById("id1").value
 var pos=str.search("need");
 document.getElementById("id2").innerHTML=pos;
 return;

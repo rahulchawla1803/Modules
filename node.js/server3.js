@@ -10,6 +10,12 @@ doFirst is called first and then doSecond. The order is determined how app.use i
 
 next() is used to call the next member in the list. List basically is the order sepecified by app.use.
 Thus in the list doFirst is first and doSecond is second.
+
+WHY?
+In earlier ways, only one function was been called at every request that was "onRequest".
+
+Using Connect you can call one function after the another.
+
  */
 
 function doFirst(request,response,next){

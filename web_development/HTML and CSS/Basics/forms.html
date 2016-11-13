@@ -2,9 +2,18 @@
 <b><u>WELCOME</b></u>
 <br><br><br>
 <form>
-USERNAME: <input type="text" name="username" /><!-- Name is for internal usage, value is for the value to be displayed initially-->>
+USERNAME: <input type="text" name="username" /><!-- Name is for internal usage, value is for the value to be displayed initially-->
 <br>
 PASSWORD: <input type="password" name="password" />
+<input type="hidden" id="hidden" name="hidden"/>
+<!--
+TYPE can be one of the following
+text, number, password, radio, checkbox, file, submit, hidden
+-->
+<!--
+NAME vs ID
+http://stackoverflow.com/questions/1397592/difference-between-id-and-name-attributes-in-html
+-->
 <br>
 <br><br><br><br>
 Upload your picture:
@@ -14,6 +23,9 @@ Upload your picture:
 <br>
 MALE <input type="radio" name="sex"/>
 FEMALE <input type="radio" name="sex"/>
+<!--Out of name="sex" you can check only one, try this in additional to the upper 2-
+FEMALE <input type="radio" name="sex2"/>
+-->
 <br><br><br><br>
 Select a Country
 <select name="countries">
@@ -30,12 +42,12 @@ Select a Country
 <option>Iceland</option>
 </select>
 <br><br><br><br>
-Enter what kind of girl you look for
+Enter what place you look for
 <br><br>
-Blonde<input type="checkbox" name="blonde"/>
-Asian<input type="checkbox" name="asian"/>
-Japanese<input type="checkbox" name="japanese"/>
-British<input type="checkbox" name="british"/>
+Europe<input type="checkbox" name="europe"/>
+Asia<input type="checkbox" name="asia"/>
+Japan<input type="checkbox" name="japan"/>
+England<input type="checkbox" name="british"/>
 <br><br><br><br>
 Describe yourself<br>
 <textarea name="describe" rows="10" cols="50" >

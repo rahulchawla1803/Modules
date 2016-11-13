@@ -27,6 +27,8 @@ function forum(request,response){
 app.use('/profile', profile);
 app.use('/forum', forum);
 app.use('/', index);
+//observe why the order of these 3 statements of app.use is like this. 
+//If '/' is written before '/profile' then all the request will be directed to index function, even the /profile
 
 http.createServer(app).listen(8888);
 console.log('Server is running');

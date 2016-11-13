@@ -40,7 +40,8 @@ function printDPS()
 },
 
 
-imdbBest: "The Shawshank Redemption"  	
+imdbBest: "The Shawshank Redemption"  
+//module is exported as an object	
 
 
 };

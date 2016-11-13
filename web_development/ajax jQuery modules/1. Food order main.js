@@ -12,6 +12,7 @@ $.ajax({
 	type: 'GET',
 	url: 'http://rest.learncode.academy/api/learncode/friends',
 	success: function(orders){
+	//orders is an array of orders, where each element of an array has two components(index, name of item)
 		
 		$.each(orders, function(i, order){
 
@@ -38,10 +39,11 @@ url: 'http://rest.learncode.academy/api/learncode/friends',
 data: order,
 success: function(newOrder)
 {
-			
 addOrder(newOrder);
-
 },
+//Two things that are happening
+//1. TYPE POST will post to the API
+//2. Success will display the item in the <ul>
 error: function()
 	 { alert('Error occured while entering');
 	}

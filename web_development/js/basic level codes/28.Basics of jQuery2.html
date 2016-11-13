@@ -4,10 +4,10 @@
 </style>
 <form>
 
-	<input type="button" id="bt1" value="bt1"/>
-	<input type="button" id="bt2" value="bt2"/>
-	<input type="button" id="bt3" value="bt3"/>
-	<input type="button" id="bt4" value="bt4"/>
+	<input type="button" id="bt1" value="toggle bt1"/>
+	<input type="button" id="bt2" value="toggle bt2"/>
+	<input type="button" id="bt3" value="toggle bt3"/>
+	<input type="button" id="bt4" value="toggle bt4"/>
 <br>
 <br>
 	<input id="text1" value="text1" class="fixed"/>
@@ -28,15 +28,15 @@ $('#bt1').on('click',function(){
 });
 
 $('#bt2').on('click',function(){
-	$('#text2').toggle(1000);
+	$('#text2').toggle(2000);
 });
 
 $('#bt3').on('click',function(){
-	$('#text3').toggle(1000);
+	$('#text3').toggle(3000);
 });
 
 $('#bt4').on('click',function(){
-	$('#text4').toggle(1000);
+	$('#text4').toggle(4000);
 });
 
 });

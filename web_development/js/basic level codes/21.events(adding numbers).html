@@ -26,6 +26,7 @@ function function1()
 {
 var one=parseInt(numOne.value);
 //Value from <input> is string, thus to convert into integer we use parseInt()
+//Value from <input type="number"> will be integer, in that case parsing won't be necessary
 var two=parseInt(numTwo.value);
 var newSum=one+two;
 sum.innerHTML="Result is: " + newSum;
